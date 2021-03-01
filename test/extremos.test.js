@@ -8,7 +8,7 @@ describe('Extremos', () => {
     });
 
     test('test a unordened array', () =>{
-        expect(extremos.acharExtremos([1, 99, 3, -5, 8])).toMatchObject({menor: -5, indiceMenor: 3, maior: 99, indiceMaior: 1});
+        expect(extremos.acharExtremos([1, 99, 3, -5, 8, 20, 45, 31])).toMatchObject({menor: -5, indiceMenor: 3, maior: 99, indiceMaior: 1});
     });
 
     test('test empty array', () =>{
@@ -17,7 +17,7 @@ describe('Extremos', () => {
         }).toThrow('vetor com zero elementos');
     });
 
-    test('test empty array', () =>{
+    test('test null array', () =>{
         expect(()=>{
             extremos.acharExtremos(null);
         }).toThrow('vetor nao pode ser nulo');
